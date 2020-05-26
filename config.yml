@@ -1,12 +1,12 @@
 development:
-  password: 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
+  password: ${STAGING_PWD}
   theme_id: "99904585892"
   store: dev-store-00002.myshopify.com
 staging:
-  password: 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
+  password: ${STAGING_PWD}
   theme_id: "99904585892"
   store: dev-store-00002.myshopify.com
 production:
-  password: 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
+  password: ${PRODUCTION_PWD}
   theme_id: "99695394977"
   store: dev-store-00001.myshopify.com
