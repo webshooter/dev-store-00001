@@ -77,5 +77,15 @@ The Shopify platform presents several challenges to ensuring that code changes a
 14. **Preview feature changes in the Production store** using the Preview theme action. This is to give one final opportunity to verify the changes in Production before making them live.
 15. **Rename the feature theme in Production**. Once the feature changes have been approved to go into production use the Rename theme action to change the feature theme from `[current theme]-[feature name]` to `production-v.x.x.x`, adding the correct version number.
 16. **Publish the renamed theme in Production** using the Publish theme action
-17. Git-tag the `master` branch with version number
-18. Push the `master` branch changes **and tags** to GitHub.
+17. **Git-tag the `master` branch with version number**
+18. **Push the `master` branch changes and tags** to GitHub.
+
+### Syncing Production changes
+It's a good idea to make sure changes made to the Production theme within the Shopify interface are sync'd up with the repository on a regular basis, even when no other feature changes have been made.
+
+Once Theme Kit is installed just follow Steps 3-6 from the previous section to update the repo:
+
+3. Get the theme ids using Theme Kit's `get --list` command, but this time you are looking for the `[live]` theme in the list.
+4. Switch to the local repo folder and make sure you are on the `master` branch.
+5. Download a copy of the current Production theme using the theme id from Step 3
+6. Commit any differences to the `master` branch, then push the commits to GitHub.
